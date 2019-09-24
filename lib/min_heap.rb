@@ -26,6 +26,7 @@ class MinHeap
   # Time Complexity: O(log n), n is the number of nodes in the heap
   # Space Complexity: O(log n), n is the number of nodes in the heap, this is a recursive function
   def remove()
+    return if @store.length == 0
     swap(0, -1)
     removed_node = @store.pop
     heap_down(0)
